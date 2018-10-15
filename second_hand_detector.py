@@ -52,24 +52,18 @@ counter = 0
 while True:
     _ , frame = video.read()
     reading_frame = frame[:200 , :200 , :]
-   #predicting_box = cv2.
+  
 
     im = Image.fromarray(reading_frame , 'RGB')
     im = im.convert('L')
-    #print(im)
+  
 
-    #img_array = image_preprocess(im)
-    #print(im)
+  
+  
     im = im.resize((28,28))
-    #print(im)
+  
     img_array = np.array(im)
-    #img_array = img_array[: , : ,1]
-    #print(img_array.shape)
     img_array = image_preprocess(img_array)
-    #im  = Image.convert('L')
-    #im = im.resize((28,28))
-    #img_array = np.array(im)
-    #img_array = np.expand_dims(img_array , axis = 0)
     cv2.rectangle(frame , (x,y),(x+w,y+h),(0,255,0),2)
     cv2.imshow("Live Feed" , frame.copy())
     
@@ -77,10 +71,7 @@ while True:
 
         prediction = predict_live(img_array , model)
         prediction = prediction[0, :]
-        #print(prediction)
-        #cv2.putText(frame, prediction, (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
         prediction_list = np.array(prediction).tolist()
-        #print(prediction_list)
         predicted_letter = letter_dictionary[prediction_list.index(max(prediction_list))]
         print(predicted_letter)
         counter = 0
