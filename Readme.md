@@ -1,7 +1,7 @@
 This repo is our first implementation of a ASL To Text converter which can be utilized by mute people to talk to 
 smart assistants such as Alexa or Google Assistant.
 
-The ipnyb file contains the CNN model implementation which was trained over 50 epochs and achieved a validation accuracy of 100% and test accuracy of 97.9%.
+The ipnyb file contains the CNN model implementation which was trained over 20 epochs and achieved a validation accuracy of 100% and test accuracy of 89%.
 
 The hand_detector.py module contains our rough implementation of grabbing a certain part of the frame as an image to be fed into our prediction module.
 
