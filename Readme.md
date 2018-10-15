@@ -8,4 +8,4 @@ The hand_detector.py module contains our rough implementation of grabbing a cert
 
 The keras_pred.py module is fed with the image taken by the above module and this image is then used by our saved model in the model.json file to make a prediction. The weights of the model have been saved in the cnn_model.h5 file.
 
-Finally the predicted letter is displayed on to the screen.
+Finally the predicted letter is displayed on to the screen. (The prediction part is not working for the time being as the model only ends up predicting p or x)
