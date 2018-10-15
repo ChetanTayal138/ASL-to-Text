@@ -16,10 +16,6 @@ def modelRetriever():
 
 
 def image_preprocess(image_array):
-    #img = cv2.imread(image_array)
-    #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    #img = cv2.resize( img , (28,28))
-    #img = np.array(img, dtype=np.float32)
     img = np.reshape(image_array, (-1, 28, 28, 1))
     return img
 
