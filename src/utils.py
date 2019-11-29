@@ -7,7 +7,7 @@ import os
 
 
 
-path = "/home/rhino/MachineLearning/Machine-Learning-Projects/ASL/train_data/"
+path = ""
 os.chdir(path)
 
 
